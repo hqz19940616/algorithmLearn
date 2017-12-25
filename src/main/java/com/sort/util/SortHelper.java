@@ -21,11 +21,31 @@ public class SortHelper {
         return  array;
     }
 
+    public static int createRandom(int rangeL,int rangeR){
+            Random random = new Random();
+            int i = random.nextInt(rangeR) % (rangeR - rangeL + 1) + rangeL;
+
+        return  i;
+    }
+
     public static void printArray(int array[]){
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
     }
 
+    public static int min(int a,int b){
+        if(a >b){
+            return b;
+        }else{
+            return a;
+        }
+    }
 
+
+    public static  void  swap ( int [] Data,  int  a,  int  b) {
+        int  t = Data[a];
+        Data[a] = Data[b];
+        Data[b] = t;
+    }
 }

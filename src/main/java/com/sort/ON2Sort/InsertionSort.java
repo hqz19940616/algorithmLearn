@@ -4,7 +4,7 @@ import com.sort.util.SortHelper;
 
 /**
  * @Author:hqz
- * @Description O(n^2) 插入排序
+ * @Description  TODO O(n^2) 插入排序
  * @Date:Create in 2017/12/14 上午11:39
  * @Version:v1.0
  */
@@ -50,6 +50,20 @@ public class InsertionSort {
             //寻找元素arr[i]合适的插入位置
             for (j = i; j >0 && arr[j-1] > e; j--) {
                       arr[j] = arr[j-1];
+            }
+            arr[j] = e;
+        }
+        return arr;
+    }
+
+   //对arr[l...r]范围内的数组进行排序
+    public static int[] insertSort3(int arr[],int l,int r){
+        for (int i = l+1; i <= r; i++) {
+            int e = arr[i];
+            int j;
+            //寻找元素arr[i]合适的插入位置
+            for (j = i; j >l && arr[j-1] > e; j--) {
+                arr[j] = arr[j-1];
             }
             arr[j] = e;
         }

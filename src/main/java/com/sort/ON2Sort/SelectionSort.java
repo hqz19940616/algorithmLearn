@@ -7,11 +7,13 @@ import java.util.Comparator;
 
 /**
  * @Author:hqz
- * @Description  O(n^2) 选择排序
+ * @Description TODO O(n^2) 选择排序
  * @Date:Create in 2017/12/13 下午5:59
  * @Version:v1.0
  */
 public class SelectionSort {
+
+    public static SortHelper sortHelper;
 
     public static void main(String[] args) {
         int n =10000;
@@ -33,9 +35,7 @@ public class SelectionSort {
                     minIndex = j;
                 }
             }
-            int temp = arr[i];
-            arr[i] = arr[minIndex];
-            arr[minIndex] = temp;
+            sortHelper.swap(arr,i,minIndex);
 
         }
         return arr;
